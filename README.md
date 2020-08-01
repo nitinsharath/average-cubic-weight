@@ -11,3 +11,11 @@ Install required packages by running
 The main entry point is ./main.py in the root directory.
 To run the program, execute:
 `python main.py`
+
+
+##NOTE
+For the sake of code clarity, we're fetching all the products first
+into memory and then calculating the cubic weights. If needed, 
+we can reduce the memory footprint by calculating the cubic weights
+as the products are being fetch.
+ 
