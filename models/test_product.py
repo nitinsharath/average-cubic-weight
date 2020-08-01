@@ -1,3 +1,4 @@
+import unittest
 from unittest import TestCase
 
 from models.product import Product
@@ -17,3 +18,7 @@ class TestProduct(TestCase):
     def test_get_average_cubic_weights(self):
         products = [self.product_1, self.product_2, self.product_3]
         self.assertEqual(Product.get_average_cubic_weights(products), 27.97835625)
+
+
+if __name__ == '__main__':
+    unittest.main()
