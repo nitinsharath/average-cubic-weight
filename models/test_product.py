@@ -11,10 +11,12 @@ class TestProduct(TestCase):
         self.product_3 = Product(category='Cat 3', width=53.7, length=80, height=15.4)
 
     def test_get_cubic_weight(self):
+        # TODO Use self.assertAlmostEqual() with a reasonable tolerance.
         self.assertEqual(self.product_1.get_cubic_weight(), 6.0)
         self.assertEqual(self.product_2.get_cubic_weight(), 61.39546875)
         self.assertEqual(self.product_3.get_cubic_weight(), 16.5396)
 
     def test_get_average_cubic_weights(self):
         products = [self.product_1, self.product_2, self.product_3]
+        # TODO Use self.assertAlmostEqual() with a reasonable tolerance.
         self.assertEqual(Product.get_average_cubic_weights(products), 27.97835625)

@@ -22,4 +22,7 @@ For the sake of code clarity, we're fetching all the products first
 into memory and then calculating the cubic weights. If needed, 
 we can reduce the memory footprint by calculating the cubic weights
 as the products are being fetch.
- 
+
+## TODO
+The test for products uses `assertEqual()` for `float`s. This should be changed to `assertAlmostEqual()`
+with a reasonable tolerance.
