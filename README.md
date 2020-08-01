@@ -1,4 +1,4 @@
-# Kogan coding challenge
+# Average cubic weight of air conditioners
 
 This is a python 3.7 script.
 
