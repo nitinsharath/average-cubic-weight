@@ -1,6 +1,6 @@
-import urllib.request
-import json
 from typing import List
+
+import requests
 
 from models.product import Product
 
@@ -38,8 +38,9 @@ def get_products(filter_by_category=None) -> List[Product]:
     next_url = '/api/products/1'
 
     while next_url:
-        with urllib.request.urlopen(base_url + next_url) as url:
-            data = json.loads(url.read().decode())
+        response = requests.get(base_url + next_url)
+        response.raise_for_status()
+        data = response.json()
 
         objects = data['objects']
         next_url = data['next']
