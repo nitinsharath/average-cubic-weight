@@ -13,6 +13,10 @@ To run the program, execute:
 `python main.py`
 
 
+##Test
+You can run the tests by running `python -m unittest`
+
+
 ##NOTE
 For the sake of code clarity, we're fetching all the products first
 into memory and then calculating the cubic weights. If needed, 
