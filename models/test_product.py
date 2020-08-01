@@ -13,3 +13,7 @@ class TestProduct(TestCase):
         self.assertEqual(self.product_1.get_cubic_weight(), 6.0)
         self.assertEqual(self.product_2.get_cubic_weight(), 61.39546875)
         self.assertEqual(self.product_3.get_cubic_weight(), 16.5396)
+
+    def test_get_average_cubic_weights(self):
+        products = [self.product_1, self.product_2, self.product_3]
+        self.assertEqual(Product.get_average_cubic_weights(products), 27.97835625)
