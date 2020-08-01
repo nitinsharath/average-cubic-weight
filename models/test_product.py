@@ -1,4 +1,3 @@
-import unittest
 from unittest import TestCase
 
 from models.product import Product
